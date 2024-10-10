@@ -14,6 +14,8 @@
 		755227A62CB70BE20085AD06 /* fluid_simTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755227A52CB70BE20085AD06 /* fluid_simTests.swift */; };
 		755227B02CB70BE20085AD06 /* fluid_simUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755227AF2CB70BE20085AD06 /* fluid_simUITests.swift */; };
 		755227B22CB70BE20085AD06 /* fluid_simUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755227B12CB70BE20085AD06 /* fluid_simUITestsLaunchTests.swift */; };
+		75F5BF9E2CB8540B00B70CC1 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F5BF9D2CB8540B00B70CC1 /* Particle.swift */; };
+		75F5BFA02CB854F300B70CC1 /* SpatialHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F5BF9F2CB854F300B70CC1 /* SpatialHash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		755227AB2CB70BE20085AD06 /* fluid-simUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fluid-simUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		755227AF2CB70BE20085AD06 /* fluid_simUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fluid_simUITests.swift; sourceTree = "<group>"; };
 		755227B12CB70BE20085AD06 /* fluid_simUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fluid_simUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75F5BF9D2CB8540B00B70CC1 /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
+		75F5BF9F2CB854F300B70CC1 /* SpatialHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialHash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,10 @@
 		755227922CB70BDF0085AD06 /* fluid-sim */ = {
 			isa = PBXGroup;
 			children = (
+				75F5BF9C2CB853E900B70CC1 /* Models */,
 				755227932CB70BDF0085AD06 /* fluid_simApp.swift */,
 				755227952CB70BDF0085AD06 /* ContentView.swift */,
+				75F5BF9F2CB854F300B70CC1 /* SpatialHash.swift */,
 				755227972CB70BE20085AD06 /* Assets.xcassets */,
 				7552279C2CB70BE20085AD06 /* fluid_sim.entitlements */,
 				755227992CB70BE20085AD06 /* Preview Content */,
@@ -127,6 +133,14 @@
 				755227B12CB70BE20085AD06 /* fluid_simUITestsLaunchTests.swift */,
 			);
 			path = "fluid-simUITests";
+			sourceTree = "<group>";
+		};
+		75F5BF9C2CB853E900B70CC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75F5BF9D2CB8540B00B70CC1 /* Particle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				755227962CB70BDF0085AD06 /* ContentView.swift in Sources */,
+				75F5BF9E2CB8540B00B70CC1 /* Particle.swift in Sources */,
+				75F5BFA02CB854F300B70CC1 /* SpatialHash.swift in Sources */,
 				755227942CB70BDF0085AD06 /* fluid_simApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,10 +437,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "fluid-sim/fluid_sim.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fluid-sim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -435,6 +454,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluid-sim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -446,10 +466,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "fluid-sim/fluid_sim.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fluid-sim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -460,6 +483,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluid-sim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
